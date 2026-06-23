@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sigil Forge</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <main id="app">
+
+      <svg width="0" height="0" style="position:absolute">
+  <defs>
+    <filter id="glow" x="-150%" y="-150%" width="400%" height="400%">
+  <feGaussianBlur stdDeviation="3.5" result="blur" />
+  <feMerge>
+    <feMergeNode in="blur" />
+    <feMergeNode in="SourceGraphic" />
+  </feMerge>
+</filter>
+  </defs>
+</svg>
+
+      <section id="forge">
+        <h1>Sigil Forge</h1>
+        <p id="moon-display"></p>
+        <input type="text" id="intention-input" placeholder="Enter your intention..." />
+        <button id="generate-btn">Generate</button>
+<p id="error-message" class="hidden"></p>
+<svg id="sigil-canvas" viewBox="0 0 400 400"></svg>
+        <svg id="sigil-canvas" viewBox="0 0 400 400"></svg>
+        <button id="seal-btn" class="hidden">Seal It</button>
+      </section>
+
+      <section id="grimoire">
+        <h2>Grimoire</h2>
+        <div id="grimoire-list"></div>
+      </section>
+
+    </main>
+
+    <script src="js/sigil.js"></script>
+    <script src="js/grimoire.js"></script>
+    <script src="js/moon.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
